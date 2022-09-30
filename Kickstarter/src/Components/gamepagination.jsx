@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
 import axios from 'axios';
-import { Link ,Box,Text,Image,Stack ,Grid,GridItem,Button,Icon} from '@chakra-ui/react';
+import { Link ,Box,Text,Image,Stack ,Grid,GridItem,Button,Icon, Divider} from '@chakra-ui/react';
 import{ArrowBackIcon,ArrowForwardIcon} from "@chakra-ui/icons"
 const Gamepagination = () => {
     const [data,setdata]=useState([])
@@ -37,10 +37,13 @@ getdata()
                     <Text color="teal">Rating: {ele.rating}</Text>
                     <Box></Box>
                 </Box>
+                
 
             </GridItem>
+            
            
          ))}
+         
 
 
          
