@@ -16,11 +16,12 @@ import Movies from "../Components/Movies";
 import Gamescard from "../Components/gamescard";
 import Peoples from "../Components/peoples";
 import People2 from "../Components/people2";
+import Footer from "../Components/Footer";
 const Home = () => {
   return (
     <div>
       <Stack spacing="20px">
-        <Box display="flex" w="100%" border="solid 0.1px grey" padding="15px">
+        <Box display="flex" w="100%" borderTop="solid 0.1px grey" borderBottom="solid 0.1px grey" padding="15px">
           <Box display="flex" gap="30px" margin="auto">
             <Link>Arts</Link>
             <Link>Comics & Illustration</Link>
@@ -125,15 +126,16 @@ const Home = () => {
 
         <Box w="100%">
           <Text fontSize="lg" textAlign="start">
-            Movies projects
+            Games projects
           </Text>
-          <Movies />
+          <Gamescard></Gamescard>
         </Box>
         <Divider></Divider>
 
         <Posters number={3}></Posters>
 
-        <Gamescard></Gamescard>
+        
+        <Movies />
 
         <Posters number={2} />
 
@@ -144,7 +146,11 @@ const Home = () => {
         <Posters number={6}></Posters>
         <People2></People2>
         <Posters number={5}></Posters>
+
+       
       </div>
+<Footer></Footer>
+
     </div>
   );
 };
