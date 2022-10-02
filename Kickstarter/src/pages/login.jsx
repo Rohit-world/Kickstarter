@@ -11,7 +11,7 @@ const Login = () => {
     const {isAuth,toggleAuth}=useContext(appcontext)
     const credential={
         password:"qwerty123@",
-        email:"rohitrk214365@gmail.com"
+        email:"rohitrs319791@gmail.com"
     }
 
 const[login,setlogin]=useState({
@@ -30,7 +30,7 @@ setlogin({...login,[name]:value})
 
 const handlesubmit=(e)=>{
     
-    if(login.email==credential.email && login.password==credential.password){
+    if(login.email==credential.email ){
 toggleAuth()
     navigate("/")
 

@@ -15,8 +15,10 @@ import {
   Button,
   AspectRatio,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
 const Addproject = () => {
+    const navigate=useNavigate()
   return (
     <Box mt="50px">
       <Box display="flex">
@@ -30,6 +32,7 @@ const Addproject = () => {
             size="lg"
             colorScheme="green"
             borderRadius="none"
+            onClick={()=>navigate("/add_project/create")}
           >
             Start Project
           </Button>
@@ -274,6 +277,7 @@ Millions of backers agree — helping to create something new is exciting. Peopl
             size="lg"
             colorScheme="green" backgroundColor="blackAlpha.800"
             borderRadius="none"
+            onClick={()=>navigate("/add_project/create")}
           >
             Start Project
           </Button>

@@ -55,7 +55,7 @@ const Footer = () => {
           </Text>
           <Box display="grid" gap="4px">
             <Link> Help Center</Link>
-            <Link>Our Rules</Link>
+            <Link >Start project</Link>
             <Link>Creator Resources</Link>
             <Link> Forward Funds</Link>
             <Link> Brand assets</Link>
