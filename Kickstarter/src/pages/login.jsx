@@ -4,19 +4,21 @@ import { FormControl,FormLabel,Input, Stack,Link, Box ,Button, Checkbox,Text,Ale
 import{EmailIcon,ExternalLinkIcon} from "@chakra-ui/icons"
 import { appcontext } from '../Context&privatefiled/Authcontext';
 import { useContext } from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import Footer from '../Components/Footer';
 const Login = () => {
+    const navigate=useNavigate()
     const {isAuth,toggleAuth}=useContext(appcontext)
     const credential={
         password:"qwerty123@",
-        email:"rohitrk214365@gmail.com"
+        email:"rohitrs319791@gmail.com"
     }
 
 const[login,setlogin]=useState({
     password:"",
     email:""
 })
-console.log(isAuth)
+// console.log(isAuth)
 const handlechange=(e)=>{
 let value=e.target.value
 let name=e.target.name
@@ -28,8 +30,10 @@ setlogin({...login,[name]:value})
 
 const handlesubmit=(e)=>{
     
-    if(login.email==credential.email && login.password==credential.password){
-alert("login successfull")
+    if(login.email==credential.email ){
+toggleAuth()
+    navigate("/")
+
 
     }
     else{
@@ -41,8 +45,8 @@ alert("login successfull")
 
 
     return (
-        <div  style={{backgroundColor:"rgb(247,247,246)",display:"flex" }}>
-<div display="flex"   style={{backgroundColor:"white", width:"35%",margin:"auto" ,padding:"20px" ,marginTop:"40px"}}>
+        <div  >
+<div display="grid"   style={{backgroundColor:"white", width:"35%",margin:"auto" ,padding:"20px" ,marginTop:"40px"}}>
 <FormControl m="auto" bg="" marginBottom="3%"  >
     <Stack spacing="15px">    <FormLabel fontSize="30px">Login</FormLabel>
       <Input
@@ -81,7 +85,9 @@ Get notified when your friends back and launch projects. We'll never post anythi
 
       </Stack>
             </FormControl>
+            
    </div>
+   <Footer/>
         </div>
         
     );
