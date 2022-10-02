@@ -42,13 +42,14 @@ const Posters = ({number}) => {
             <Grid templateColumns='repeat(2, 1fr)'  w="100%" paddingTop="2%" paddingBottom="2%" marginTop="60px">
                 <GridItem>
                     <Box w="100%" p="5%">
-                        <Image w="110%"  src={ele.ulr}></Image>
+                        <Image  w="100%"   src={ele.ulr}></Image>
                         </Box>
                 </GridItem>
 
-                <GridItem>
+
+                <GridItem >
                     <Box display="grid" w="100%" justifyContent="flex-start" textAlign="start" h="100%">
-                       <Box >
+                       <Box borderLeft="solid 5px teal" paddingLeft="4%" >
                         <Stack>
 
                        
@@ -57,7 +58,7 @@ const Posters = ({number}) => {
                         <Text fontSize="large">{ele.para}</Text>
                         </Stack>
                        </Box>
-                       <Text color="blue">{ele.link}</Text>
+                       <Text marginTop="10px" color="blue">{ele.link}</Text>
                       
                     </Box>
                     

@@ -11,7 +11,7 @@ const Privatefield = ({children}) => {
         );
     }
     else{
-<Navigate to="/login"/>
+ return <Navigate to="/login"/>
     }
    
 }

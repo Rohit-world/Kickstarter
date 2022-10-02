@@ -10,6 +10,7 @@ import {
   Image,
   Divider,
 } from "@chakra-ui/react";
+
 import Gamepagination from "../Components/gamepagination";
 import Posters from "../Components/Posters";
 import Movies from "../Components/Movies";
@@ -17,13 +18,20 @@ import Gamescard from "../Components/gamescard";
 import Peoples from "../Components/peoples";
 import People2 from "../Components/people2";
 import Footer from "../Components/Footer";
+const breakpoints = {
+  sm: '320px',
+  md: '768px',
+  lg: '960px',
+  xl: '1200px',
+  '2xl': '1536px',
+}
 const Home = () => {
   return (
     <div>
       <Stack spacing="20px">
         <Box display="flex" w="100%" borderTop="solid 0.1px grey" borderBottom="solid 0.1px grey" padding="15px">
           <Box display="flex" gap="30px" margin="auto">
-            <Link>Arts</Link>
+            <Link >Arts</Link>
             <Link>Comics & Illustration</Link>
             <Link>Design & Tech</Link>
             <Link>Film</Link>
